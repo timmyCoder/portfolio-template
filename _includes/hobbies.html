@@ -22,24 +22,26 @@
 <div class="list">
 
     <div class="row">
+        {% for item in site.data.hobbies %}
         <div class="column">
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="./assets/img/mlh.jpg">
+                        <img src="./assets/img/hobbies/{{ item.logo }}"">
 
                     </div>
                     <div class="flip-card-back">
 
                         <div class="hobbies-text" id="hobbies">
 
-                            <p style="margin-top: 100px;">Hackathons</p>
+                            <p style="margin-top: 100px; text-align: center;">{{ item.name }}</p>
 
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        {% endfor %}
 
 
 
